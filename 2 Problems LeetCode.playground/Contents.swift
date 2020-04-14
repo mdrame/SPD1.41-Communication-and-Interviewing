@@ -26,6 +26,7 @@ func twoSum(list array: [Int], sum target: Int) -> [Int] {
 print(twoSum(list: [2,7,11,15], sum: 17))
 
 // Binary Search
+
 func binarySearch(list array: [Int], value target: Int) ->Bool {
     // checking if array is not empty
     if array.count == 0 {
