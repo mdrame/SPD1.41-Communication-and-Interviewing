@@ -25,7 +25,7 @@ assert(isUnique(input: "Adam") == true, "Sorry, string is not unique my friend")
 func refacterisUnique(input: String)->Bool {
     return Set(input).count == input.count
 }
-//
+// Call & Test
 print(refacterisUnique(input: "Dude"))
 assert(refacterisUnique(input: "Brother") == false, "Key is unique")
 
@@ -44,8 +44,17 @@ func palindrome(input: String) -> Bool {
     return false
 }
 
+// Call & Test
 print(palindrome(input: "Never"))
 assert(palindrome(input: "Rotator") == true, "String not a palindrome")
 
-
+// Recactor
+func refactorpalindrome(input: String)->Bool {
+    let lowercaseInput = input.lowercased()
+//    print("Reversed: \(lowercaseInput.reversed()), Original: \(lowercaseInput)")
+    return lowercaseInput.reversed() == Array(lowercaseInput)
+}
+// Call & Test
+print(refactorpalindrome(input: "Never odd or even"))
+assert(refactorpalindrome(input: "bob") == true, "String is not a palindrome")
 
