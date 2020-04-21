@@ -17,5 +17,7 @@ func isUnique(input string: String)-> Bool  {
     return true
 }
 
+print(isUnique(input: "Mohamed"))
+// Test
+assert(isUnique(input: "Adam") == true, "Sorry, string is not unique my friend")
 
-isUnique(input: "Mohamed")
