@@ -16,8 +16,17 @@ func isUnique(input string: String)-> Bool  {
     }
     return true
 }
-
+// Call & Test
 print(isUnique(input: "Mohamed"))
-// Test
 assert(isUnique(input: "Adam") == true, "Sorry, string is not unique my friend")
+
+// Refacter
+func refacterisUnique(input: String)->Bool {
+    return Set(input).count == input.count
+}
+
+print(refacterisUnique(input: "Dude"))
+assert(refacterisUnique(input: "Brother") == false, "Key is unique")
+
+
 
