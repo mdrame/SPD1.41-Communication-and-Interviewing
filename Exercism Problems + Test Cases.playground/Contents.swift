@@ -35,7 +35,7 @@ assert(refacterisUnique(input: "Brother") == false, "Key is unique")
 // Write a function that accepts a String as its only parameter, and returns true if the string reads the same when reversed, ignoring case.
 
 func palindrome(input: String) -> Bool {
-// convert input to lowercased string of a new variable. check newly created lowercase array with input as an array as a condition statment. Retrun bool base of
+    // convert input to lowercased string of a new variable. check newly created lowercase array with input as an array as a condition statment. Retrun bool base of
     let lowercase = input.lowercased()
     //    print(lowercase)
     if lowercase.reversed() == Array(lowercase) {
@@ -51,10 +51,16 @@ assert(palindrome(input: "Rotator") == true, "String not a palindrome")
 // Recactor
 func refactorpalindrome(input: String)->Bool {
     let lowercaseInput = input.lowercased()
-//    print("Reversed: \(lowercaseInput.reversed()), Original: \(lowercaseInput)")
+    //    print("Reversed: \(lowercaseInput.reversed()), Original: \(lowercaseInput)")
     return lowercaseInput.reversed() == Array(lowercaseInput)
 }
 // Call & Test
 print(refactorpalindrome(input: "Never odd or even"))
 assert(refactorpalindrome(input: "bob") == true, "String is not a palindrome")
+
+
+
+
+
+
 
